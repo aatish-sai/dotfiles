@@ -70,7 +70,7 @@ require("blink.cmp").setup({
 	},
 })
 
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable({ "lua_ls", "astro" })
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Decleration" })
