@@ -11,5 +11,5 @@ require("configs.colorscheme")
 require("configs.keymaps")
 require("configs.ui")
 require("configs.lsp")
-
+require("configs.formatting")
 
