@@ -71,3 +71,21 @@ require("blink.cmp").setup({
 })
 
 vim.lsp.enable({ "lua_ls" })
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Decleration" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "References" })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Goto Implementation" })
+vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { desc = "Goto T[y]pe Definition" })
+vim.keymap.set("n", "gai", vim.lsp.buf.incoming_calls, { desc = "C[a]lls [i]ncoming" })
+vim.keymap.set("n", "gao", vim.lsp.buf.outgoing_calls, { desc = "C[a]lls [o]utgoing" })
+vim.keymap.set("n", "ss", vim.lsp.buf.document_symbol, { desc = "LSP Symbols" })
+
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+
+vim.keymap.set("n", "<leader>co", function()
+	vim.lsp.buf.code_action({ apply = true, context = {
+		only = { "source.organizeImports" },
+		diagnostics = {},
+	} })
+end, { desc = "Organize Imports" })
