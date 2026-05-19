@@ -45,6 +45,18 @@ vim.opt.cursorline = true
 -- Enables 24-bit RGB colors in the terminal
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
+-- Transparency of popup window
+vim.opt.pumblend = 10
+-- Transparency of floating window
+vim.opt.winblend = 10
+-- Popup menu max rows
+vim.opt.pumheight = 10
+-- Help command window height
+vim.opt.helpheight = 20
+-- Preview window height
+vim.opt.previewheight = 12
+-- Command window height
+vim.opt.cmdwinheight = 5
 
 --Prevents showing extra messages when using completion
 vim.opt.shortmess:append("c")
@@ -52,3 +64,8 @@ vim.opt.shortmess:append("c")
 vim.opt.completeopt = "menu,menuone,noselect,popup"
 
 vim.opt.guicursor = ""
+
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+
+vim.opt.formatoptions = "1jcroql"
