@@ -4,11 +4,16 @@ vim.pack.add({
 
 require("nvim-treesitter").setup({
 	install_dir = vim.fn.stdpath("data") .. "/site",
+	highlight = {
+		enable = true,
+	},
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "<filetype>" },
-	callback = function()
-		vim.treesitter.start()
+	callback = function(args)
+		local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+		if lang and vim.treesitter.query.get(lang, "highlights") then
+			vim.treesitter.start(args.buf, lang)
+		end
 	end,
 })

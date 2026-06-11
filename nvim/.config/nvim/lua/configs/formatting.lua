@@ -11,6 +11,7 @@ require("conform").setup({
 		javascriptreact = { "prettierd" },
 		typescriptreact = { "prettierd" },
 		typst = { lsp_fallback = "fallback" },
+		css = { "prettierd", lsp_fallback = "fallback" },
 	},
 	format_on_save = { timeout_ms = 500, lsp_fallback = true },
 })

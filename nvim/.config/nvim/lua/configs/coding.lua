@@ -15,3 +15,15 @@ vim.pack.add({
 })
 
 require("mini.surround").setup()
+
+vim.diagnostic.config({
+	signs = true,
+	underline = true,
+	float = {
+		source = true,
+		border = "rounded",
+		focusable = true,
+	},
+	update_in_insert = false,
+	severity_sort = true,
+})

@@ -35,10 +35,10 @@ map("n", "N", "Nzzzv", { silent = true })
 map("n", "vd", vim.diagnostic.open_float)
 map("n", "[d", function()
 	vim.diagnostic.jump({ count = -1 })
-end)
+end, { desc = "Next Diagnostic" })
 map("n", "]d", function()
 	vim.diagnostic.jump({ count = 1 })
-end)
+end, { desc = "Prev Diagnostic" })
 -- Ctrl C to escape
 map("i", "<C-c>", "<Esc>", { silent = true })
 
