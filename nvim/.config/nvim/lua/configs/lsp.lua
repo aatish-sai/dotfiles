@@ -70,7 +70,19 @@ require("blink.cmp").setup({
 	},
 })
 
-vim.lsp.enable({ "lua_ls", "astro", "cssls", "jsonls", "eslint", "tinymist", "tailwindcss", "expert", "html" })
+vim.lsp.enable({
+	"lua_ls",
+	"astro",
+	"cssls",
+	"jsonls",
+	"eslint",
+	"tinymist",
+	"tailwindcss",
+	"expert",
+	"html",
+	"ruff",
+	"ty",
+})
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Decleration" })
