@@ -82,6 +82,8 @@ vim.lsp.enable({
 	"html",
 	"ruff",
 	"ty",
+	"vtsls",
+	"oxlint",
 })
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto Definition" })

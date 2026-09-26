@@ -39,6 +39,7 @@ end, { desc = "Next Diagnostic" })
 map("n", "]d", function()
 	vim.diagnostic.jump({ count = 1 })
 end, { desc = "Prev Diagnostic" })
+
 -- Ctrl C to escape
 map("i", "<C-c>", "<Esc>", { silent = true })
 
@@ -46,3 +47,7 @@ map("n", "Q", ":noh <CR>", { silent = true })
 
 -- Save file
 map("n", "<leader>w", vim.cmd.w, { desc = "Save File", silent = true })
+
+map("i", "<C-space>", function()
+	vim.lsp.completion.get()
+end)
